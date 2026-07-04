@@ -171,7 +171,7 @@ export const updateAttendance = async (
   }
 };
 
-export const getTrainersPublic = async (req: Request, res: Response): Promise<void> => {
+export const getTrainersPublic = async (_req: Request, res: Response): Promise<void> => {
   try {
     const trainers = await Trainer.find().populate({
       path: 'userId',
