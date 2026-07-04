@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #272624;
+  --foreground: #F7F5F2;
+  --card-bg: #2f2e2b;
+  --modal-bg: #383733;
+  --accent-teal: #667C81;
+  --accent-amber: #A56A23;
+  --accent-gold: #DDA964;
+  --base-beige: #DCC7AE;
+  --text-muted: #b8b5b0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-brand-charcoal: var(--background);
+  --color-brand-charcoal-tint: var(--card-bg);
+  --color-brand-charcoal-light: var(--modal-bg);
+  --color-brand-teal: var(--accent-teal);
+  --color-brand-amber: var(--accent-amber);
+  --color-brand-gold: var(--accent-gold);
+  --color-brand-beige: var(--base-beige);
+  --color-brand-ivory: var(--foreground);
+  --color-brand-ivory-muted: var(--text-muted);
+
+  --font-cinzel: var(--font-cinzel);
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+
+  --radius-brand: 18px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cinzel), serif;
+  color: var(--foreground);
+}
+
+.font-secondary {
+  font-family: var(--font-poppins), sans-serif;
+}
