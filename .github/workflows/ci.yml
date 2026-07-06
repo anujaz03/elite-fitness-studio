@@ -23,15 +23,19 @@ jobs:
             backend/package-lock.json
             frontend/package-lock.json
 
-      - name: Install & Compile Backend
+      - name: Install Backend Dependencies
         working-directory: ./backend
-        run: |
-          npm ci
-          npm run build
+        run: npm ci
 
-      - name: Install & Compile Frontend
+      - name: Compile Backend
+        working-directory: ./backend
+        run: npm run build
+
+      - name: Install Frontend Dependencies
         working-directory: ./frontend
-        run: |
-          npm ci
-          npm run build
+        run: npm ci
+
+      - name: Compile Frontend
+        working-directory: ./frontend
+        run: npm run build
 
